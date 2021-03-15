@@ -6,9 +6,7 @@ import retrofit2.http.Headers
 import retrofit2.http.Query
 
 interface UnsplashApi {
-
-
-    @Headers("Accept.Version: v1", "Authorization: Client-ID ${Const.UNSPLASH_ACCESS_KEY}")
+    @Headers("Accept-Version: v1", "Authorization: Client-ID ${Const.UNSPLASH_ACCESS_KEY}")
     @GET("/search/photos")
     suspend fun searchPhotos(
         @Query("query") query: String,
